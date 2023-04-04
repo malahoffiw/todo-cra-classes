@@ -1,15 +1,11 @@
 .footer {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    left: 0;
     display: flex;
     width: 100vw;
 }
 
 @media (hover: hover) {
     .footer {
-        left: calc(50% - 200px);
+        margin-inline: auto;
         width: 400px;
     }
 }
