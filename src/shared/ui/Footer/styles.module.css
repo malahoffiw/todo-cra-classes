@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    display: flex;
+}
+
+@media (hover: hover) {
+    .footer {
+        left: calc(50% - 200px);
+        width: 400px;
+    }
+}

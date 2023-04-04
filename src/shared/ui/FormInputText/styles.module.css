@@ -1,0 +1,46 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 12px;
+    transition: border-bottom-color .2s ease-in;
+    max-width: 100%;
+    border-bottom: 1px solid var(--neutral-400);
+}
+
+.box:has(.input:focus) {
+    transition: border-bottom-color .2s ease-in;
+    border-bottom: 1px solid var(--neutral-600);
+}
+
+.box[data-label="Search"] {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.input {
+    transition: all .2s ease-in;
+    border: none;
+    outline: none;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    background-color: var(--neutral-100);
+    color: var(--neutral-900);
+}
+
+.error>.input {
+    border-bottom-color: var(--red);
+}
+
+.errorText {
+    padding: 10px 15px;
+    font-size: 12px;
+    color: var(--red);
+}

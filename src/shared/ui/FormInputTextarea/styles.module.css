@@ -1,0 +1,29 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    max-width: 100%;
+}
+
+.label {
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.textarea {
+    resize: none;
+    transition: background-color .2s ease-in, border-bottom-color .2s ease-in;
+    border: none;
+    border-bottom: 1px solid var(--neutral-400);
+    outline: none;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    background-color: var(--neutral-100);
+    color: var(--neutral-900);
+}
+
+.textarea:focus {
+    transition: border-bottom-color .2s ease-in;
+    border-bottom: 1px solid var(--neutral-600);
+}

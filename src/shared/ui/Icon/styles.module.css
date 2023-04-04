@@ -1,0 +1,13 @@
+.icon {
+    transition: .2s ease-in;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--neutral-400);
+    margin-left: auto;
+    cursor: pointer;
+    color: var(--neutral-900);
+}
+
+.icon:hover {
+    transition: .2s ease-in;
+    border-bottom: 1px solid var(--neutral-900);
+}

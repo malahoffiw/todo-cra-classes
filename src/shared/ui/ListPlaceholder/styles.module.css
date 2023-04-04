@@ -1,0 +1,30 @@
+.wrapper {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    animation: pulse 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.text {
+    font-size: 14px;
+    color: var(--neutral-600);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        color: var(--yellow);
+        filter: drop-shadow(0 -2px 5px var(--yellow));
+        opacity: 1;
+    }
+    50% {
+        color: var(--neutral-600);
+        filter: drop-shadow(0 0 0);
+        opacity: .5;
+    }
+}

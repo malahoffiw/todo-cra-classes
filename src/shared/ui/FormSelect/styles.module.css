@@ -1,0 +1,27 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 100%;
+}
+
+.label {
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.select {
+    transition: background-color .2s ease-in, border-bottom-color .2s ease-in;
+    border: none;
+    border-bottom: 1px solid var(--neutral-400);
+    outline: none;
+    padding: 10px 15px;
+    background-color: var(--neutral-100);
+    color: var(--neutral-900);
+}
+
+.select:focus {
+    transition: border-bottom-color .2s ease-in;
+    border-bottom: 1px solid var(--neutral-600);
+}
+
