@@ -56,6 +56,7 @@ main {
 
 section {
   overflow: auto;
+  width: 100vw;
   height: calc(100vh - 104px);
 }
 
