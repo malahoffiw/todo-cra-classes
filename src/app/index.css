@@ -41,7 +41,6 @@ body[data-theme='dark'] {
 
 body {
   transition: background-color .2s ease-in;
-  overflow: hidden;
   background-color: var(--neutral-100);
   color: var(--neutral-900);
 
@@ -52,7 +51,7 @@ body {
 
 main {
   margin: 52px auto;
-  width: 100%;
+  width: 100vw;
 }
 
 section {
