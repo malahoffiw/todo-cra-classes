@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import styles from 'shared/ui/Modal/styles.module.css';
 
 export const TasksContext = createContext(null);
-
 export class TasksProvider extends Component {
   constructor(props) {
     super(props);

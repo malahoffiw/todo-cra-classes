@@ -16,8 +16,6 @@ export class ThemeProvider extends Component {
     }));
   };
 
-  // getDerivedStateFromProps from localStorage
-
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps === this.props && prevState === this.state) return;
     document.body.dataset.theme = this.state.theme;

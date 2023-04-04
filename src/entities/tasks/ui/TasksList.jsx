@@ -2,7 +2,7 @@ import { Component } from 'react';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
-import { TasksContext } from '../model/tasksContext';
+import { TasksContext } from 'entities/tasks';
 import { Card, List, ListPlaceholder } from 'shared/ui';
 
 dayjs.extend(relativeTime);

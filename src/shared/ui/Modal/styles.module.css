@@ -1,11 +1,11 @@
 .wrapper {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
-    z-index: 1000;
+    transform: scale(0);
     width: 100vw;
     height: 100vh;
-    transform: scale(0);
 }
 
 .container {
@@ -32,26 +32,26 @@
 }
 
 .close {
-    background-color: var(--neutral-400);
-    color: var(--neutral-900);
     border: 0;
     padding: 15px 20px;
+    background-color: var(--neutral-400);
+    color: var(--neutral-900);
 }
 
 .modalBody {
-    max-height: calc(100% - 92px);
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
+    max-height: calc(100% - 92px);
+    padding: 20px 0;
 }
 
 @media (hover: hover) {
     .wrapper {
-        background-color: #adb5bdb3;
         display: grid;
         place-items: center;
+        background-color: #adb5bdb3;
     }
 
     .modal {
@@ -61,21 +61,21 @@
 
     .visible {
         transform: scaleY(.01) scaleX(0);
-        animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: unfoldIn .7s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .visible .modal {
         transform: scale(0);
-        animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: zoomIn .4s .6s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .visible.out {
         transform: scale(1);
-        animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: unfoldOut .7s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .visible.out .modal {
-        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: zoomOut .4s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 }
 

@@ -1,13 +1,13 @@
 .button {
     transition: background-color .2s ease-in, border-top-color .2s ease-in;
-    padding: 15px 20px;
+    outline: none;
     border: none;
     border-top: 1px solid var(--neutral-400);
-    outline: none;
     width: 100%;
+    padding: 15px 20px;
     line-height: 21px;
-    color: #f8f9fa;
     filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.34));
+    color: #f8f9fa;
     cursor: pointer;
 }
 

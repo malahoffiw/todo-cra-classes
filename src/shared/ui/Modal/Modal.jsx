@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
 import { VscChromeClose } from 'react-icons/vsc';
 
+import { Icon } from 'shared/ui';
 import styles from './styles.module.css';
-import { Icon } from '../Icon/Icon';
 
 export const Modal = forwardRef(({ children, label, handleClose }, ref) => (
   <div ref={ref} className={styles.wrapper}>

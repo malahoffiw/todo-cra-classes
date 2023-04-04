@@ -1,16 +1,11 @@
 import { Component, createRef } from 'react';
 import ReactSwipe from 'react-swipe';
 
-import { OpenForm } from 'features/openForm/OpenForm';
-import { ThemeContext, ThemeProvider } from 'entities/navBar/model/themeContext';
-import { TasksProvider } from 'entities/tasks/model/tasksContext';
-import { pages } from 'entities/navBar/model/pages';
-import { NavBar } from 'entities/navBar/ui/NavBar';
-import { ActiveList, ArchivedList, DoneList } from 'entities/tasks/ui/TasksList';
-import { TaskForm } from 'entities/tasks/ui/TaskForm';
+import { Search, OpenForm } from 'features';
+import { ThemeContext, ThemeProvider, pages, NavBar } from 'entities/navBar';
+import { TaskForm, ActiveList, ArchivedList, DoneList, TasksProvider } from 'entities/tasks';
+import { PageHeader } from 'shared/ui';
 import './index.css';
-import { Search } from '../features/search/Search';
-import { PageHeader } from '../shared/ui/PageHeader/PageHeader';
 
 export class App extends Component {
   static contextType = ThemeContext;

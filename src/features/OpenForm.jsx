@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { TasksContext } from 'entities/tasks/model/tasksContext';
+import { TasksContext } from 'entities/tasks';
 import { Button, Footer } from 'shared/ui';
 
 export class OpenForm extends Component {

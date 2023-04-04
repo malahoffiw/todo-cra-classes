@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { TasksContext } from 'entities/tasks/model/tasksContext';
+import { TasksContext } from 'entities/tasks';
 import { FormInputText } from 'shared/ui';
 
 export class Search extends Component {

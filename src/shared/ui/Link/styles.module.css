@@ -14,7 +14,7 @@
 }
 
 .link[data-active=true] {
-    color: var(--neutral-600);
     border-bottom: 1px solid var(--neutral-900);
+    color: var(--neutral-600);
     cursor: default;
 }
