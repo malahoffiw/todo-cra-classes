@@ -1,7 +1,6 @@
 import { Component, createContext } from 'react';
 
 export const ThemeContext = createContext(null);
-
 export class ThemeProvider extends Component {
   constructor(props) {
     super(props);
@@ -10,16 +9,16 @@ export class ThemeProvider extends Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps === this.props && prevState === this.state) return;
+    document.body.dataset.theme = this.state.theme;
+  }
+
   handleThemeChange = () => {
     this.setState((prevState) => ({
       theme: prevState.theme === 'light' ? 'dark' : 'light',
     }));
   };
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps === this.props && prevState === this.state) return;
-    document.body.dataset.theme = this.state.theme;
-  }
 
   render() {
     return (

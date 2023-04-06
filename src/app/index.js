@@ -36,12 +36,13 @@ export class App extends Component {
     };
 
   render() {
-    const currPageIndex = this.state.pages.findIndex((page) => page.active);
+    const { pages } = this.state;
+    const currPageIndex = pages.findIndex((page) => page.active);
 
     return (
       <ThemeProvider>
         <TasksProvider>
-          <NavBar pages={this.state.pages} handlePageChange={this.handlePageChange} />
+          <NavBar pages={pages} handlePageChange={this.handlePageChange} />
           <TaskForm />
           <main>
             <ReactSwipe
@@ -51,7 +52,7 @@ export class App extends Component {
                 startSlide: currPageIndex,
                 transitionEnd: (i) => {
                   if (i !== currPageIndex) {
-                    this.handlePageChange(this.state.pages[i].name, true)();
+                    this.handlePageChange(pages[i].name, true)();
                   }
                 },
               }}

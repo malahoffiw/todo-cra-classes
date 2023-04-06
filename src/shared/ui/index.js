@@ -1,3 +1,6 @@
+import styles from './Modal/styles.module.css';
+export { styles };
+
 export * from './Button/Button';
 export * from './Card/Card';
 export * from './Footer/Footer';

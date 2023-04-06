@@ -5,6 +5,7 @@ import { Button } from 'shared/ui';
 
 export class DeleteTask extends Component {
   static contextType = TasksContext;
+
   handleDelete = () => {
     this.context.api.deleteTask(this.context.openedTask.id);
     this.context.api.closeTask();

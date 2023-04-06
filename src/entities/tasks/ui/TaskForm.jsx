@@ -86,12 +86,16 @@ export class TaskForm extends Component {
 
   render() {
     const { values, errorTitle } = this.state;
+    const {
+      api: { closeTask },
+      openedTask,
+    } = this.context;
 
     return (
       <Modal
         ref={this.context.modalRef}
-        label={this.context.openedTask ? 'Modify task' : 'New task'}
-        handleClose={this.context.api.closeTask}
+        label={openedTask ? 'Modify task' : 'New task'}
+        handleClose={closeTask}
       >
         <FormInputText
           label="Title"
@@ -108,7 +112,7 @@ export class TaskForm extends Component {
         />
         <FormInputTextarea label="Body" onChange={this.handleChange} value={values.body} />
         <Footer>
-          {this.context.openedTask && <DeleteTask />}
+          {openedTask && <DeleteTask />}
           <SaveTask
             error={errorTitle}
             values={values}

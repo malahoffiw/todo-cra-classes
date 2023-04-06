@@ -5,6 +5,7 @@ import { Button } from 'shared/ui';
 
 export class SaveTask extends Component {
   static contextType = TasksContext;
+
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.props.errorTitle) {

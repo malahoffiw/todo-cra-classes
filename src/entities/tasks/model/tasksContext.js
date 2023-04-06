@@ -1,7 +1,7 @@
 import { Component, createContext, createRef } from 'react';
 import dayjs from 'dayjs';
 
-import styles from 'shared/ui/Modal/styles.module.css';
+import { styles } from 'shared/ui';
 
 export const TasksContext = createContext(null);
 export class TasksProvider extends Component {
