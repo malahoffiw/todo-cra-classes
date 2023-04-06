@@ -11,7 +11,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
 .modal {
@@ -96,7 +95,7 @@
 
     .visible .modal {
         opacity: 0;
-        animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: scaleDown .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .visible + main {
@@ -112,7 +111,7 @@
     }
 
     .visible.out .modal {
-        animation: scaleDown .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        animation: scaleUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
     }
 
     .visible.out + main {
@@ -179,9 +178,9 @@
         background: #21252900;
     }
 }
-@keyframes scaleUp {
+@keyframes scaleDown {
     0% {
-        transform:scale(.8) translateY(1000px);
+        transform:scale(.8) translateY(-1000px);
         opacity:0;
     }
     100% {
@@ -190,13 +189,13 @@
     }
 }
 
-@keyframes scaleDown {
+@keyframes scaleUp {
     0% {
         transform:scale(1) translateY(0px);
         opacity:1;
     }
     100% {
-        transform:scale(.8) translateY(1000px);
+        transform:scale(.8) translateY(-1000px);
         opacity:0;
     }
 }
