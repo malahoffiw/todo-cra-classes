@@ -14,7 +14,7 @@
     border-bottom: 1px solid var(--neutral-600);
 }
 
-.box[data-label="Search"] {
+.box[data-id="search"] {
     flex-direction: row;
     align-items: center;
     gap: 10px;

@@ -99,6 +99,7 @@ export class TaskForm extends Component {
       >
         <FormInputText
           label="Title"
+          id="title"
           error={errorTitle}
           onChange={this.handleChange}
           onBlur={this.handleBlur}
@@ -106,11 +107,17 @@ export class TaskForm extends Component {
         />
         <FormSelect
           label="Status"
+          id="status"
           options={['Active', 'Archived', 'Done']}
           onChange={this.handleChange}
           value={values.status}
         />
-        <FormInputTextarea label="Body" onChange={this.handleChange} value={values.body} />
+        <FormInputTextarea
+          label="Description"
+          id="body"
+          onChange={this.handleChange}
+          value={values.body}
+        />
         <Footer>
           {openedTask && <DeleteTask />}
           <SaveTask

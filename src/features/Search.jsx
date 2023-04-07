@@ -33,6 +33,6 @@ export class Search extends Component {
   };
 
   render() {
-    return <FormInputText label="Search" value={this.state.search} onChange={this.handleChange} />;
+    return <FormInputText id="search" value={this.state.search} onChange={this.handleChange} />;
   }
 }
